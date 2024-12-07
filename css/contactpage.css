@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: #C1C1C1;
+    max-width: 1440px;
+    overflow: hidden;
+}
+@font-face {
+    font-family: Work Sans ;
+    src: url(../resurces/WorkSans-Regular.ttf)
+    url(../resurces/WorkSans-Medium.ttf)
+    url(../resurces/WorkSans-SemiBold.ttf)
+    url(../resurces/WorkSans-Bold.ttf);
+}
+:root {
+    /* Fonts */
+    --font-primary: "Work Sans", sans-serif; 
+    --font-secundary: "Source Serif 4", serif;
+}
+.header {
+    background-color: #F2F2F2;
+    height: 76px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+}
+.header-container {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    width: 100%;
+}
+.header__menu {
+    display: flex;
+    gap: 10px; 
+}
+.header__menu a {
+    color:  #130E13;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+.header__menu a:hover {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.25);  
+}
+.header__menu--icon-only {
+    display: none;
+}
+.contact__picture img{
+    width: 1440px;
+    height: 240px;
+    object-fit: cover;
+}
+.contact__title{
+    text-align: center;
+}
+.contact__title h2{
+    color: #40010D;
+    font-family: "Source Serif 4";
+    font-size: 75px;
+    font-weight: 600;
+    line-height: 61px; 
+    letter-spacing: 22.5px;
+}
+.contact__info{
+    display: flex;
+    width: 483px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 70px;
+    gap: 20px;
+}
+.contact__number {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.contact__number img {
+    border-radius: 999px;
+}
+.contact__number p {
+    color: #130E13;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact__media{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.contact__media img {
+    border-radius: 999px;
+}
+.contact__media p{
+    color: #130E13;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 400;
+}
+.contact__email {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.contact__email img{
+    height: 34px;
+    width: 34px;
+}
+.contact__email p{
+    color: #130E13;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer {
+    background: #730220;
+    display: flex;
+    height: 54px;
+    padding: 10px 24px;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 40px;
+    gap: 10px;
+
+}
+.footer a {
+    z-index: 10; 
+}
+.footer__image--1{
+    z-index: 1;
+}
+.footer__image--3{
+    z-index: 2;
+}
+.footer__image--2{
+    z-index: 3;
+}
+@media (max-width: 744px) {
+    /* Ajustes generales */
+    body {
+        max-width: 100%;
+        overflow: auto;
+        padding-top: 76px;
+    }
+    .header {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+    .header-container {
+        gap: 20px;
+    }
+    .contact__picture img {
+        width: 100%; 
+        height: 400px; 
+        object-fit: cover; 
+    }
+    .contact__title h2 {
+        font-size: 50px; 
+        line-height: 45px; 
+        letter-spacing: 15px; 
+        justify-self: center;
+        align-items: center;
+        margin-top: 100px;
+        padding-bottom: 420px
+
+    }
+    .contact__info {
+        width: 100%; 
+        padding: 10px 20px; 
+        gap: 15px; 
+        position: absolute;
+        left: 25%;
+        top: 60%;
+        text-align: center;
+    }
+    .footer {
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 375px) {
+    .header__menu {
+        display: none; 
+        flex-direction: column;
+        background-color: #730220;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px
+    }
+    .header__menu a{
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+    .header__menu.active {
+        display: flex;
+    }
+    .header__menu--icon-only {
+        display: block; 
+        align-items: right;
+        cursor: pointer;
+    }
+    .contact__info {
+        width: 100%; 
+        padding: 10px 20px; 
+        gap: 15px; 
+        position: absolute;
+        left: 5%;
+        top: 60%;
+        text-align: center;
+    }
+}
